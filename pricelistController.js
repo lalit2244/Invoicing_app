@@ -1,5 +1,5 @@
 // File: backend/controllers/pricelistController.js
-const db = require('../config/database');
+const db = require('./database');
 
 exports.getAllProducts = async (req, res) => {
   try {
@@ -182,4 +182,5 @@ exports.deleteProduct = async (req, res) => {
       error: 'Internal server error' 
     });
   }
+
 };
