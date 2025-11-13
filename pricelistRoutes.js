@@ -1,8 +1,8 @@
 // File: backend/routes/pricelistRoutes.js
 const express = require('express');
 const router = express.Router();
-const pricelistController = require('../controllers/pricelistController');
-const authenticateToken = require('../middleware/authMiddleware');
+const pricelistController = require('./pricelistController');
+const authenticateToken = require('./authMiddleware');
 
 // All routes require authentication
 router.use(authenticateToken);
@@ -21,5 +21,6 @@ router.put('/:id', pricelistController.updateProduct);
 
 // DELETE /api/pricelist/:id - Delete product
 router.delete('/:id', pricelistController.deleteProduct);
+
 
 module.exports = router;
