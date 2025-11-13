@@ -1,0 +1,257 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.terms-container {
+  min-height: 100vh;
+  background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- HEADER ---------- */
+.terms-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Left Section (Logo) */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.terms-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
+  transition: transform 0.3s ease;
+}
+
+.terms-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Bar */
+.terms-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: opacity 0.3s, text-decoration 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Right Section (Language + Menu) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  transition: background 0.3s;
+}
+
+.language-selector:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.language-selector img {
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+}
+
+/* Hamburger */
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.hamburger-button:hover {
+  opacity: 0.7;
+}
+
+/* ---------- CONTENT ---------- */
+.terms-title-header {
+  margin-top: 130px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.terms-content-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.terms-content-box {
+  background: rgba(255, 255, 255, 0.92);
+  color: #333;
+  border-radius: 12px;
+  max-width: 850px;
+  width: 100%;
+  padding: 35px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.terms-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ---------- CLOSE BUTTON ---------- */
+.close-button {
+  display: block;
+  margin: 45px auto 60px;
+  background: #00a000;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 14px rgba(0, 160, 0, 0.3);
+}
+
+.close-button:hover {
+  background: #008800;
+  transform: translateY(-2px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+  .terms-header {
+    padding: 16px 22px;
+  }
+
+  .terms-nav {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .terms-logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .terms-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .hamburger-button {
+    display: block;
+  }
+
+  .terms-nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 0;
+    display: none;
+  }
+
+  .terms-nav.active {
+    display: flex;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .language-selector {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  .terms-title-header {
+    font-size: 30px;
+    margin-top: 110px;
+  }
+
+  .terms-content-box {
+    padding: 25px;
+  }
+}
+
+/* Small Devices (<= 480px) */
+@media (max-width: 480px) {
+  .terms-logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .terms-title-header {
+    font-size: 26px;
+  }
+
+  .close-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
