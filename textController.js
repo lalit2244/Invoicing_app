@@ -1,5 +1,5 @@
 // File: backend/controllers/textController.js
-const db = require('../config/database');
+const db = require('./database');
 
 exports.getTexts = async (req, res) => {
   try {
@@ -57,4 +57,5 @@ exports.getMenuTexts = async (req, res) => {
       error: 'Internal server error' 
     });
   }
+
 };
