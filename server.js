@@ -4,9 +4,9 @@ const express = require('express');
 const cors = require('cors');
 
 // Import routes
-const authRoutes = require('./routes/authRoutes');
-const textRoutes = require('./routes/textRoutes');
-const pricelistRoutes = require('./routes/pricelistRoutes');
+const authRoutes = require('./authRoutes');
+const textRoutes = require('./textRoutes');
+const pricelistRoutes = require('./pricelistRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -52,4 +52,5 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+
 });
